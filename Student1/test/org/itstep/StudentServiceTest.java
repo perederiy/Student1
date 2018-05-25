@@ -21,6 +21,7 @@ public class StudentServiceTest {
 		StudentData[] studentName = studentService.getStudentInArray();
 		String name = studentName[0].getFirstName();
 		assertEquals("Alex", name);
+		assertTrue(array !=null);
 	}
 
 	@Test
@@ -34,7 +35,9 @@ public class StudentServiceTest {
 		list.add(student3);
 		StudentService studentService = new StudentService();
 		ArrayList<StudentData> studentSecondName = studentService.getStudentInList();
-		assertNotNull(studentSecondName != null);
+		String secondName = studentSecondName.get(0).getSecondName();
+		assertEquals("Borisov", secondName);
+		assertTrue(studentSecondName != null);
 	}
 
 }
